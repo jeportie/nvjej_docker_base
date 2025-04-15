@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 # Base System Configuration ************************************************** #
-FROM ubuntu:22.04
+FROM node:latest
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install necessary packages
@@ -102,9 +102,9 @@ COPY config/nvjej.zshrc /root/.zshrc
 COPY config/allman.clang-format /root/.clang-format-styles/Allman
 
 # Install Node
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && \
-    . ~/.nvm/nvm.sh && \
-    nvm install node
+#RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && \
+#    . ~/.nvm/nvm.sh && \
+#    nvm install node
 
 # Install UV installer.
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
