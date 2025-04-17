@@ -55,6 +55,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     python3-venv \
     libgtest-dev \
+	libgmock-dev \
     lua5.3 \
     lua5.3-dev \
     lua5.1 \
